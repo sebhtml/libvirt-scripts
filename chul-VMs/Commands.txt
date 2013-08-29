@@ -1,0 +1,119 @@
+# Migrating volume domains.OTRS-Debian-squeeze-amd64.img
+virsh vol-download domains.OTRS-Debian-squeeze-amd64.img blob virtualization
+stat -c %s blob > volume-capacity
+virsh vol-create-as domain-images OTRS-Debian-squeeze-amd64.img $(cat volume-capacity)
+virsh vol-upload OTRS-Debian-squeeze-amd64.img blob domain-images
+virsh vol-delete domains.OTRS-Debian-squeeze-amd64.img virtualization
+
+# Migrating volume domains.seb-CentOS-5.9.img
+virsh vol-download domains.seb-CentOS-5.9.img blob virtualization
+stat -c %s blob > volume-capacity
+virsh vol-create-as domain-images seb-CentOS-5.9.img $(cat volume-capacity)
+virsh vol-upload seb-CentOS-5.9.img blob domain-images
+virsh vol-delete domains.seb-CentOS-5.9.img virtualization
+
+# Migrating volume domains.test-centos-5.9.img
+virsh vol-download domains.test-centos-5.9.img blob virtualization
+stat -c %s blob > volume-capacity
+virsh vol-create-as domain-images test-centos-5.9.img $(cat volume-capacity)
+virsh vol-upload test-centos-5.9.img blob domain-images
+virsh vol-delete domains.test-centos-5.9.img virtualization
+
+# Migrating volume domains.Windows-7-charles.img
+virsh vol-download domains.Windows-7-charles.img blob virtualization
+stat -c %s blob > volume-capacity
+virsh vol-create-as domain-images Windows-7-charles.img $(cat volume-capacity)
+virsh vol-upload Windows-7-charles.img blob domain-images
+virsh vol-delete domains.Windows-7-charles.img virtualization
+
+# Migrating volume ISO-images.archlinux-2013.08.01-dual.iso
+virsh vol-download ISO-images.archlinux-2013.08.01-dual.iso blob virtualization
+stat -c %s blob > volume-capacity
+virsh vol-create-as iso-images archlinux-2013.08.01-dual.iso $(cat volume-capacity)
+virsh vol-upload archlinux-2013.08.01-dual.iso blob iso-images
+virsh vol-delete ISO-images.archlinux-2013.08.01-dual.iso virtualization
+
+# Migrating volume ISO-images.CentOS-5.9-x86_64-bin-DVD-1of2.iso
+virsh vol-download ISO-images.CentOS-5.9-x86_64-bin-DVD-1of2.iso blob virtualization
+stat -c %s blob > volume-capacity
+virsh vol-create-as iso-images CentOS-5.9-x86_64-bin-DVD-1of2.iso $(cat volume-capacity)
+virsh vol-upload CentOS-5.9-x86_64-bin-DVD-1of2.iso blob iso-images
+virsh vol-delete ISO-images.CentOS-5.9-x86_64-bin-DVD-1of2.iso virtualization
+
+# Migrating volume ISO-images.CentOS-5.9-x86_64-bin-DVD-2of2.iso
+virsh vol-download ISO-images.CentOS-5.9-x86_64-bin-DVD-2of2.iso blob virtualization
+stat -c %s blob > volume-capacity
+virsh vol-create-as iso-images CentOS-5.9-x86_64-bin-DVD-2of2.iso $(cat volume-capacity)
+virsh vol-upload CentOS-5.9-x86_64-bin-DVD-2of2.iso blob iso-images
+virsh vol-delete ISO-images.CentOS-5.9-x86_64-bin-DVD-2of2.iso virtualization
+
+# Migrating volume ISO-images.FreeNAS-9.1.0-RELEASE-x64.iso
+virsh vol-download ISO-images.FreeNAS-9.1.0-RELEASE-x64.iso blob virtualization
+stat -c %s blob > volume-capacity
+virsh vol-create-as iso-images FreeNAS-9.1.0-RELEASE-x64.iso $(cat volume-capacity)
+virsh vol-upload FreeNAS-9.1.0-RELEASE-x64.iso blob iso-images
+virsh vol-delete ISO-images.FreeNAS-9.1.0-RELEASE-x64.iso virtualization
+
+# Migrating volume ISO-images.Microsoft_Windows-7-Entreprise-Ultimate-FR-64-SP1-ulaval.iso
+virsh vol-download ISO-images.Microsoft_Windows-7-Entreprise-Ultimate-FR-64-SP1-ulaval.iso blob virtualization
+stat -c %s blob > volume-capacity
+virsh vol-create-as iso-images Microsoft_Windows-7-Entreprise-Ultimate-FR-64-SP1-ulaval.iso $(cat volume-capacity)
+virsh vol-upload Microsoft_Windows-7-Entreprise-Ultimate-FR-64-SP1-ulaval.iso blob iso-images
+virsh vol-delete ISO-images.Microsoft_Windows-7-Entreprise-Ultimate-FR-64-SP1-ulaval.iso virtualization
+
+# Migrating volume ISO-images.minix_R3.2.1-972156d.iso
+virsh vol-download ISO-images.minix_R3.2.1-972156d.iso blob virtualization
+stat -c %s blob > volume-capacity
+virsh vol-create-as iso-images minix_R3.2.1-972156d.iso $(cat volume-capacity)
+virsh vol-upload minix_R3.2.1-972156d.iso blob iso-images
+virsh vol-delete ISO-images.minix_R3.2.1-972156d.iso virtualization
+
+# Migrating volume ISO-images.OpenBSD-amd64-5.3.iso
+virsh vol-download ISO-images.OpenBSD-amd64-5.3.iso blob virtualization
+stat -c %s blob > volume-capacity
+virsh vol-create-as iso-images OpenBSD-amd64-5.3.iso $(cat volume-capacity)
+virsh vol-upload OpenBSD-amd64-5.3.iso blob iso-images
+virsh vol-delete ISO-images.OpenBSD-amd64-5.3.iso virtualization
+
+# Migrating volume ISO-images.proxmox-ve_3.1-e1f08ccd-6.iso
+virsh vol-download ISO-images.proxmox-ve_3.1-e1f08ccd-6.iso blob virtualization
+stat -c %s blob > volume-capacity
+virsh vol-create-as iso-images proxmox-ve_3.1-e1f08ccd-6.iso $(cat volume-capacity)
+virsh vol-upload proxmox-ve_3.1-e1f08ccd-6.iso blob iso-images
+virsh vol-delete ISO-images.proxmox-ve_3.1-e1f08ccd-6.iso virtualization
+
+# Migrating volume ISO-images.turnkey-otrs-12.1-squeeze-amd64.iso
+virsh vol-download ISO-images.turnkey-otrs-12.1-squeeze-amd64.iso blob virtualization
+stat -c %s blob > volume-capacity
+virsh vol-create-as iso-images turnkey-otrs-12.1-squeeze-amd64.iso $(cat volume-capacity)
+virsh vol-upload turnkey-otrs-12.1-squeeze-amd64.iso blob iso-images
+virsh vol-delete ISO-images.turnkey-otrs-12.1-squeeze-amd64.iso virtualization
+
+# Migrating volume ISO-images.virtio-win-0.1-65.iso
+virsh vol-download ISO-images.virtio-win-0.1-65.iso blob virtualization
+stat -c %s blob > volume-capacity
+virsh vol-create-as iso-images virtio-win-0.1-65.iso $(cat volume-capacity)
+virsh vol-upload virtio-win-0.1-65.iso blob iso-images
+virsh vol-delete ISO-images.virtio-win-0.1-65.iso virtualization
+
+# Migrating volume pristine-images.CentOS-5.9-x86_64-Desktop.img
+virsh vol-download pristine-images.CentOS-5.9-x86_64-Desktop.img blob virtualization
+stat -c %s blob > volume-capacity
+virsh vol-create-as pristine-images CentOS-5.9-x86_64-Desktop.img $(cat volume-capacity)
+virsh vol-upload CentOS-5.9-x86_64-Desktop.img blob pristine-images
+virsh vol-delete pristine-images.CentOS-5.9-x86_64-Desktop.img virtualization
+
+# Migrating volume pristine-images.Windows-7-virtio-clean.img
+virsh vol-download pristine-images.Windows-7-virtio-clean.img blob virtualization
+stat -c %s blob > volume-capacity
+virsh vol-create-as pristine-images Windows-7-virtio-clean.img $(cat volume-capacity)
+virsh vol-upload Windows-7-virtio-clean.img blob pristine-images
+virsh vol-delete pristine-images.Windows-7-virtio-clean.img virtualization
+
+# Migrating volume usb-drive.img
+virsh vol-download usb-drive.img blob virtualization
+stat -c %s blob > volume-capacity
+virsh vol-create-as domain-images usb-drive.img-migrated $(cat volume-capacity)
+virsh vol-upload usb-drive.img-migrated blob domain-images
+virsh vol-delete usb-drive.img virtualization
+
